@@ -8,7 +8,13 @@
         --border-color: black;
       }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
 *{
     margin: 0;
@@ -24,6 +30,10 @@ html,body {
 body{
     background: #111111;
     font-family: "Poppins", sans-serif;
+}
+
+*::selection{
+    background-color: #C052FF;
 }
 
 .navbar{
@@ -42,6 +52,7 @@ body{
     border-radius: 10px;
     position: fixed;
     top: 2%;
+    z-index: 9999;
 }
 
 nav{
@@ -73,7 +84,7 @@ nav{
     padding: 0px 50px;
     position: relative;
     margin-top: 150px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .page1-wrapper{
@@ -295,12 +306,16 @@ nav{
 /* page 5 --------------- > */
 
 #page5{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    padding: 20px 50px;
+    padding: 0px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('images/aboutbg.png'); /* Path to image */
+    background-size: cover; /* Make image cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
 }
 
 .page-5-main-wrapper h1{
@@ -316,6 +331,7 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    
 }
 
 .page-5-main-wrapper .links a {
